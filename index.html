@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Fortune Cookie</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0e5d8; 
+            font-family: 'Comfortaa', cursive; 
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #704214; 
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+        }
+
+        .fortune-cookie {
+            background: url('cookie.png') no-repeat center center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            cursor: pointer;
+            border-radius: 50%; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); 
+            transition: transform 0.3s ease;
+        }
+
+        .fortune-cookie:hover {
+            transform: scale(1.05); 
+        }
+
+        .fortune-text {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            color: #704214;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            transition: opacity 0.5s, visibility 0.5s ease; 
+        }
+
+        .fortune-cookie:hover .fortune-text {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Fortune Cookie</h1>
+    <div class="fortune-cookie">
+        <span class="fortune-text">A thrilling time is in your immediate future.</span>
+    </div>
+</body>
+</html>
